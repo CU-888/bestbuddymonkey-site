@@ -91,6 +91,7 @@ h2{font-size:clamp(30px,4.4vw,46px);text-align:center;margin:0 0 8px;color:var(-
 .signup{background:var(--sky2);border-radius:28px;padding:24px}
 .signup h3{margin:0 0 12px;font-size:26px;color:var(--denim)}
 .signup form{display:grid;gap:12px}
+.signup .gift{margin:0 0 14px;color:var(--ink);font-size:17px}.signup .gift img{display:block;width:100%;max-width:340px;height:auto;border-radius:14px;border:3px solid #fff;margin:0 0 8px}.signup-note a{color:var(--denim);font-weight:700}
 .signup input[type=email]{font:inherit;padding:15px 18px;border-radius:16px;border:3px solid #fff;width:100%}
 .check{display:flex;gap:10px;align-items:flex-start;font-size:16px}
 .check input{width:22px;height:22px;margin-top:2px;flex:none;accent-color:var(--grass2)}
@@ -200,8 +201,9 @@ footer a{color:#fff}
       </div>
       <div class="signup">
         <h3>Hear about a New Episode First......</h3>
+        <p class="gift"><img src="/free/continents-chart-preview.jpg" alt="Continents and Oceans of the World chart by Best Buddy Monkey" width="520" height="367" loading="lazy">Join and get our free <b>Continents and Oceans of the World</b> chart to print.</p>
         <form action="https://assets.mailerlite.com/jsonp/2694376/forms/201088612393027461/subscribe" method="get" target="_blank" id="parents-signup" aria-label="Parents' email list">
-          <p id="signup-note" role="status" aria-live="polite" hidden></p>
+          <p id="signup-note" class="signup-note" role="status" aria-live="polite" hidden></p>
           <input type="email" name="fields[email]" autocomplete="email" placeholder="Your email address" aria-label="Your email address" required>
           <label class="check"><input type="checkbox" required><span>I'm a parent or carer, aged 18 or over.</span></label>
           <label class="check"><input type="checkbox" name="groups[]" value="201091850442900601"><span>Tell me When Best Buddy T-shirts are Available<br><span class="small">Helping to support the channel.......</span></span></label>
@@ -249,7 +251,7 @@ footer a{color:#fff}
       .then(function (j) {
         if (j && j.success) {
           Array.prototype.forEach.call(form.children, function (el) { if (el !== note) el.style.display = 'none'; });
-          note.textContent = 'Thank you! Check your email and press the confirm button to finish.';
+          note.innerHTML = 'Thank you! Check your email and press the confirm button to finish.<br><a href="/free/continents-chart.pdf" download>Download your free continents chart</a>';
         } else {
           note.textContent = 'Sorry, that did not go through. Please check your email address and try again.';
           button.disabled = false;
