@@ -1,8 +1,23 @@
 <!doctype html>
 <html lang="en"><head><meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
 <title>Best Buddy Monkey - Watch</title>
 <meta name="robots" content="noindex">
-<meta http-equiv="refresh" content="0; url=https://www.youtube.com/watch?v=6C1p8zL-yIc&amp;list=PLDMGVvkoJQts">
 <link rel="canonical" href="https://www.youtube.com/watch?v=6C1p8zL-yIc&amp;list=PLDMGVvkoJQts">
-<script>location.replace("https://www.youtube.com/watch?v=6C1p8zL-yIc&list=PLDMGVvkoJQts");</script>
-</head><body><a href="https://www.youtube.com/watch?v=6C1p8zL-yIc&amp;list=PLDMGVvkoJQts">Watch Best Buddy Monkey on YouTube</a></body></html>
+<script>
+// Phones: try the YouTube app first (Instagram and Facebook open links in their own browser), then fall back to the web page.
+var V="6C1p8zL-yIc", L="PLDMGVvkoJQts";
+var web="https://www.youtube.com/watch?v="+V+"&list="+L;
+var ua=navigator.userAgent||"";
+if(/iPhone|iPad|iPod/i.test(ua)){
+  location.href="youtube://www.youtube.com/watch?v="+V+"&list="+L;
+  setTimeout(function(){location.replace(web);},1500);
+}else if(/Android/i.test(ua)){
+  location.href="intent://www.youtube.com/watch?v="+V+"&list="+L+"#Intent;package=com.google.android.youtube;scheme=https;S.browser_fallback_url="+encodeURIComponent(web)+";end";
+}else{
+  location.replace(web);
+}
+</script>
+</head><body style="font-family:sans-serif;text-align:center;padding:40px 16px">
+<p><a href="https://www.youtube.com/watch?v=6C1p8zL-yIc&amp;list=PLDMGVvkoJQts">Watch Best Buddy Monkey on YouTube</a></p>
+</body></html>
