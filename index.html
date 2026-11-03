@@ -256,7 +256,7 @@ footer a{color:#fff}
       .then(function (j) {
         if (j && j.success) {
           Array.prototype.forEach.call(form.children, function (el) { if (el !== note) el.style.display = 'none'; });
-          note.innerHTML = 'Thank you! Check your email and press the confirm button to finish.<br><a href="/free/continents-chart.pdf" download>Download your free continents chart</a>';
+          note.innerHTML = 'Thank you! Check your email and press the confirm button to finish.<br><a href="/free/continents-chart.pdf" download>Download your free continents chart</a><br><a href="https://www.youtube.com/@bestbuddymonkey?sub_confirmation=1" target="_blank" rel="noopener">Subscribe on YouTube for each new episode</a>';
         } else {
           note.textContent = 'Sorry, that did not go through. Please check your email address and try again.';
           button.disabled = false;
